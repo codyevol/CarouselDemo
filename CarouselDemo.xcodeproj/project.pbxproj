@@ -14,6 +14,8 @@
 		61002D551BE27D9300870AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61002D531BE27D9300870AE9 /* LaunchScreen.storyboard */; };
 		61002D601BE27D9300870AE9 /* CarouselDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61002D5F1BE27D9300870AE9 /* CarouselDemoTests.swift */; };
 		61002D6B1BE27D9300870AE9 /* CarouselDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61002D6A1BE27D9300870AE9 /* CarouselDemoUITests.swift */; };
+		61002D791BE280D700870AE9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61002D781BE280D700870AE9 /* Common.swift */; };
+		61002D7B1BE2838100870AE9 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61002D7A1BE2838100870AE9 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		61002D661BE27D9300870AE9 /* CarouselDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61002D6A1BE27D9300870AE9 /* CarouselDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDemoUITests.swift; sourceTree = "<group>"; };
 		61002D6C1BE27D9300870AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61002D781BE280D700870AE9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		61002D7A1BE2838100870AE9 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		61002D491BE27D9300870AE9 /* CarouselDemo */ = {
 			isa = PBXGroup;
 			children = (
+				61002D781BE280D700870AE9 /* Common.swift */,
 				61002D4A1BE27D9300870AE9 /* AppDelegate.swift */,
 				61002D4C1BE27D9300870AE9 /* ViewController.swift */,
 				61002D4E1BE27D9300870AE9 /* Main.storyboard */,
+				61002D7A1BE2838100870AE9 /* IntroViewController.swift */,
 				61002D511BE27D9300870AE9 /* Assets.xcassets */,
 				61002D531BE27D9300870AE9 /* LaunchScreen.storyboard */,
 				61002D561BE27D9300870AE9 /* Info.plist */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61002D4D1BE27D9300870AE9 /* ViewController.swift in Sources */,
+				61002D791BE280D700870AE9 /* Common.swift in Sources */,
 				61002D4B1BE27D9300870AE9 /* AppDelegate.swift in Sources */,
+				61002D7B1BE2838100870AE9 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
