@@ -153,6 +153,9 @@
                                                 <rect key="frame" x="19" y="21" width="282" height="49"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <animations/>
+                                                <connections>
+                                                    <action selector="didPressLogin:" destination="Ezm-Cb-eC7" eventType="touchUpInside" id="FSD-V0-n0y"/>
+                                                </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="x0l-Wn-4Is">
                                                 <rect key="frame" x="265" y="36" width="20" height="20"/>
@@ -173,14 +176,44 @@
                     <navigationItem key="navigationItem" id="vV7-Rc-52y"/>
                     <connections>
                         <outlet property="buttonParentView" destination="k4W-vA-xub" id="NdP-aH-vMd"/>
+                        <outlet property="emailField" destination="KNs-uP-Et6" id="TM4-9t-RmU"/>
                         <outlet property="fieldParentView" destination="fA8-V2-zN9" id="UcN-mO-019"/>
+                        <outlet property="loginButton" destination="GSe-L2-IJ8" id="7Ba-52-uoR"/>
+                        <outlet property="loginIndicator" destination="x0l-Wn-4Is" id="gFf-ys-SLW"/>
                         <outlet property="loginNavBar" destination="yWr-ya-N7G" id="OzX-9t-lbq"/>
+                        <outlet property="passwordField" destination="CX8-hc-9hV" id="qiS-lk-rb8"/>
                         <outlet property="scrollView" destination="psC-Ny-po3" id="40M-rY-Kt1"/>
+                        <segue destination="e2U-jg-tby" kind="modal" identifier="toTutorial" id="Rgy-QC-7eO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOJ-Yw-Ijb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1332" y="652"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0po-R5-vNA">
+            <objects>
+                <viewController id="e2U-jg-tby" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cm7-vC-xNx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iXg-5V-crd">
+                                <rect key="frame" x="74" y="228" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fc6-OP-cIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T0S-TM-qb1">

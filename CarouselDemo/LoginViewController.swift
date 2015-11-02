@@ -14,7 +14,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var buttonParentView: UIView!
     @IBOutlet weak var loginNavBar: UIImageView!
     @IBOutlet weak var fieldParentView: UIView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
     
+    let alertController = UIAlertController(title: "Oops!", message: "Enter your email and password", preferredStyle: .Alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,5 +98,43 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    @IBAction func didPressLogin(sender: AnyObject) {
+        if (emailField.text!.isEmpty || passwordField.text!.isEmpty) {
+            let alertController = UIAlertController(title: "Oops!", message: "Please Enter an email and password", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Close", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+        }
+        else if (emailField.text == "member@db.com" && passwordField.text == "password") {
+            self.loginIndicator.startAnimating()
+            delay(2, closure: { () -> () in
+                self.loginIndicator.stopAnimating()
+                self.performSegueWithIdentifier("toTutorial", sender: self)
+            })
+        }
+        else {
+            let alertController = UIAlertController(title: "Bummer!", message: "Your email or password in incorrect", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Close", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            self.loginIndicator.startAnimating()
+            delay(2, closure: { () -> () in
+                self.presentViewController(alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
+                self.loginIndicator.stopAnimating()
+            })
+            
+        }
+    
+    }
 
 }
