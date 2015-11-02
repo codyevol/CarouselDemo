@@ -52,7 +52,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <connections>
-                                            <segue destination="Ezm-Cb-eC7" kind="push" id="g6a-it-098"/>
+                                            <segue destination="Ezm-Cb-eC7" kind="push" animates="NO" id="g6a-it-098"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="SlH-2E-qqk">
@@ -82,7 +82,7 @@
         <!--Login View Controller-->
         <scene sceneID="hU6-lJ-zJk">
             <objects>
-                <viewController id="Ezm-Cb-eC7" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="Ezm-Cb-eC7" userLabel="Login View Controller" customClass="LoginViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LH3-z3-ZlH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                                 <rect key="frame" x="0.0" y="7" width="59" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="didTapBack:" destination="Ezm-Cb-eC7" eventType="touchUpInside" id="hTf-CS-J7u"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="psC-Ny-po3">
                                 <rect key="frame" x="0.0" y="74" width="320" height="494"/>
@@ -168,6 +171,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vV7-Rc-52y"/>
+                    <connections>
+                        <outlet property="buttonParentView" destination="k4W-vA-xub" id="NdP-aH-vMd"/>
+                        <outlet property="fieldParentView" destination="fA8-V2-zN9" id="UcN-mO-019"/>
+                        <outlet property="loginNavBar" destination="yWr-ya-N7G" id="OzX-9t-lbq"/>
+                        <outlet property="scrollView" destination="psC-Ny-po3" id="40M-rY-Kt1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOJ-Yw-Ijb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
