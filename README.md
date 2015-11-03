@@ -2,7 +2,7 @@
 Assignment 2 for iOS for designers class
 
 
-Time Spent: 14 hours total
+Time Spent: 11 hours total
 
 ###Completed user stories:
 
