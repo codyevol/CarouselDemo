@@ -4,7 +4,7 @@ Assignment 2 for iOS for designers class
 
 Time Spent: 14 hours total
 
-Completed user stories:
+###Completed user stories:
 
 * [x] Static photo tiles on the initial screen
 * [x] Optional: Photo tiles move with scrolling
