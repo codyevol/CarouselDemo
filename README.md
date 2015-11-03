@@ -6,15 +6,38 @@ Time Spent: 14 hours total
 
 Completed user stories:
 
-* [x] User can tap through the 3 welcome screens.
-* [x] User can follow the create user flow.
-* [x] On the create user form, the user can tap the back button to go to the page where they can sign in or create an account.
-* [x] Before creating the account, user can choose to read the terms of service.
-* [x] After creating the account, user can view the placeholders for Files, Photos, and Favorites as well as the Settings screen.
-* [x] User can log out from the Settings screen.
-* [x] User can follow the sign in flow.
-* [x] User can tap the area for "Having trouble signing in?"
-* [x] User can log out from the Settings screen.
+* [x] Static photo tiles on the initial screen
+* [x] Optional: Photo tiles move with scrolling
+
+Sign In
+* [x] Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
+
+Upon tapping the Sign In button.
+* [x] If the username or password fields are empty, user sees an error alert.
+* [x] If credentials are incorrect, user sees a loading indicator for 2 seconds followed by an error alert.
+* [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
+* [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
+* [x] Optional: On appear, scale the form up and fade it in.
+
+Tutorial Screens
+* [x] User can page between the screens
+* [x] Optional: User can page between the screens with updated dots
+* [x] Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
+
+
+Image Timeline
+* [x] Display a scrollable view of images.
+* [x] User can tap on the conversations button to see the conversations screen (push).
+* [x] User can tap on the profile image to see the settings view (modal from below).
+
+Conversations
+* [x] User can dismiss the conversations screen
+
+Settings
+* [x] User can dismiss the settings screen.
+* [x] User can log out
+* [x] Optional:Tapping the Sign Out button presents a UIAlertController that gives options to Sign Out or Cancel Using UIAlertController
+
 
 
 Walkthrough of all user stories:
