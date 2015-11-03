@@ -38,5 +38,21 @@ class settings: UIViewController, UIScrollViewDelegate {
     @IBAction func closeSettings(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func signOut(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .Destructive) { (action) in
+            self.performSegueWithIdentifier("signOut", sender: self)
+        }
+        
+        alertController.addAction(signOutAction)
+        alertController.addAction(cancelAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 
 }
