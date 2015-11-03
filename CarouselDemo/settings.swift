@@ -8,13 +8,16 @@
 
 import UIKit
 
-class settings: UIViewController {
+class settings: UIViewController, UIScrollViewDelegate {
+    
     @IBOutlet weak var closeSettings: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        scrollView.contentSize = imageView.image!.size
     }
 
     override func didReceiveMemoryWarning() {

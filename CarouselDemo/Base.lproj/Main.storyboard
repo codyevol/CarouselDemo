@@ -266,16 +266,11 @@
             <objects>
                 <viewController id="u5P-Hi-rK8" customClass="settings" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rx8-1N-eWm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings_nav" id="OFR-ZZ-9Ja">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="QV4-dA-ybZ">
-                                <rect key="frame" x="-1" y="64" width="320" height="695"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
@@ -287,18 +282,42 @@
                                     <action selector="closeSettings:" destination="u5P-Hi-rK8" eventType="touchUpInside" id="FHm-yg-DM0"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Mlu-hG-2Ic">
+                                <rect key="frame" x="0.0" y="62" width="320" height="688"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="yfl-Nl-WGL">
+                                        <rect key="frame" x="0.0" y="-61" width="320" height="800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="at5-dk-I5o">
+                                        <rect key="frame" x="0.0" y="614" width="320" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="PQk-Cz-WkZ" kind="modal" animates="NO" id="SNA-cT-JUg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="phb-Do-ikL"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="750"/>
                     <connections>
                         <outlet property="closeSettings" destination="zPM-o8-6lc" id="OnW-oM-hqi"/>
+                        <outlet property="imageView" destination="yfl-Nl-WGL" id="IKx-b9-R0f"/>
+                        <outlet property="scrollView" destination="Mlu-hG-2Ic" id="G8V-ig-EYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeJ-HZ-ns1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837" y="1173"/>
+            <point key="canvasLocation" x="1799" y="1252"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Mtv-ec-Pka">
@@ -437,4 +456,7 @@
         <image name="welcome3" width="320" height="568"/>
         <image name="welcome4" width="320" height="568"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SNA-cT-JUg"/>
+    </inferredMetricsTieBreakers>
 </document>
